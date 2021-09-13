@@ -8,7 +8,6 @@ before_install:
   - npm install
 
 script:
-  - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t ws18250840411/hello-docker:latest .
   - docker push ws18250840411/hello-docker:latest
