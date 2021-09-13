@@ -9,5 +9,5 @@ before_install:
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t ws18250840411/hello-docker:latest .
-  - docker push ws18250840411/hello-docker:latest
+  - docker build -t ws18250840411/hello-docker:latest1 .
+  - docker push ws18250840411/hello-docker:latest1
