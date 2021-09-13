@@ -3,10 +3,12 @@ node_js:
   - "14"
 services:
   - docker
+
 before_install:
   - npm install
+
 script:
   - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t ws18250840411/hello-docker:laster .
-  - docker push ws18250840411/hello-docker:laster
+  - docker build -t ws18250840411/hello-docker:latest .
+  - docker push ws18250840411/hello-docker:latest
